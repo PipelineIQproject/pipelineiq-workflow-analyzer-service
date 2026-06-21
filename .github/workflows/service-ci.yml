@@ -1,0 +1,23 @@
+name: Service CI/CD
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+  workflow_dispatch:
+
+jobs:
+  service:
+    uses: PipelineIQproject/pipeline_main/.github/workflows/reusable-node-service-ci.yml@dev
+    with:
+      service_name: workflow-analyzer-service
+      image_name: final_capstone-workflow-analyzer-service
+      dockerfile: services/workflow-analyzer-service/Dockerfile
+      node_project_dir: services/workflow-analyzer-service
+      chart_path: workflow-analyzer-service
+      container_port: "8080"
+      smoke_mode: container
+      sonar_organization: pipelineiqproject
+      sonar_project_key: pipelineiq-workflow-analyzer-service
+    secrets: inherit
