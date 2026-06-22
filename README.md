@@ -11,7 +11,7 @@ docker build -t <acr-login-server>/final_capstone-workflow-analyzer-service:loca
 ## Local Run
 
 This service expects PipelineIQ environment variables from Kubernetes ConfigMap and Key Vault secrets.
-
+ 
 ```bash
 cd services/workflow-analyzer-service
 npm install
