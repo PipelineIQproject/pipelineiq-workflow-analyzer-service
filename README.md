@@ -6,7 +6,7 @@ Independent repository for the PipelineIQ workflow analyzer worker.
 
 ```bash
 docker build -t <acr-login-server>/final_capstone-workflow-analyzer-service:local -f services/workflow-analyzer-service/Dockerfile .
-``` 
+```  
 
 ## Local Run 
 
